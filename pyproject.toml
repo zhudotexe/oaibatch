@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oaibatch"
+dynamic = ["version"]
+authors = [
+    { name = "Andrew Zhu", email = "andrew@zhu.codes" },
+]
+description = "A simple command-line tool to run batch completions against the OpenAI API."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    # https://pypi.org/classifiers/
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "openai>=1.22.0,<2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zhudotexe/oaibatch"
+"Bug Tracker" = "https://github.com/zhudotexe/oaibatch/issues"
+
+[tool.hatch]
+version.path = "oaibatch/_version.py"
+
+[tool.black]
+line-length = 120
+preview = true
